@@ -8,7 +8,7 @@ target_include_directories(test_google PRIVATE
 
 target_link_libraries(test_google PRIVATE
 	GTest::gtest_main
-	helloworld_lib
+	print_ip_lib
 )
 
 include(GoogleTest)
