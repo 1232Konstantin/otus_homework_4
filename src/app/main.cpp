@@ -28,7 +28,7 @@ void print_ip(T value)
 
 
 
-template<typename T, typename = T::iterator>
+template<typename T, typename = typename T::iterator>
 void print_ip(T value)
 {
 	auto lastIt = std::prev(value.end());
