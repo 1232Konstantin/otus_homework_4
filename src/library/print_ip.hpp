@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <type_traits>
 
 #include "is_container.hpp"
