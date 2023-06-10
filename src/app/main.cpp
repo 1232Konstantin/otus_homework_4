@@ -6,6 +6,8 @@
 #include <string>
 #include <vector>
 
+
+
 template<typename T, std::enable_if_t<std::is_arithmetic_v<T>, int> = 0>
 void print_ip(T value)
 {
