@@ -1,5 +1,8 @@
 #include <gtest/gtest.h>
 
+#include <list>
+#include <vector>
+
 #include <print_ip.hpp>
 
 #include "StdOutReader.h"
