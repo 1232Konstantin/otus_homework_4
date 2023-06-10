@@ -1,3 +1,11 @@
+/*!
+\file
+\brief Library test file
+
+The file contains tests for the correctness of the output of template functions 
+for printing an IP address
+*/
+
 #include <gtest/gtest.h>
 
 #include <list>
@@ -9,6 +17,7 @@
 
 
 
+/// \brief Checking the output of the IP address in int8_t format
 TEST(test_print_ip, print_int8_t)
 {
 	StdOutReader reader;
@@ -21,6 +30,7 @@ TEST(test_print_ip, print_int8_t)
 
 
 
+/// \brief Checking the output of the IP address in int16_t format
 TEST(test_print_ip, print_int16_t)
 {
 	StdOutReader reader;
@@ -33,6 +43,7 @@ TEST(test_print_ip, print_int16_t)
 
 
 
+/// \brief Checking the output of the IP address in int32_t format
 TEST(test_print_ip, print_int32_t)
 {
 	StdOutReader reader;
@@ -45,6 +56,7 @@ TEST(test_print_ip, print_int32_t)
 
 
 
+/// \brief Checking the output of the IP address in int64_t format
 TEST(test_print_ip, print_int64_t)
 {
 	StdOutReader reader;
@@ -57,6 +69,7 @@ TEST(test_print_ip, print_int64_t)
 
 
 
+/// \brief Checking the output of the IP address in std::string format
 TEST(test_print_ip, print_string)
 {
 	StdOutReader reader;
@@ -69,6 +82,7 @@ TEST(test_print_ip, print_string)
 
 
 
+/// \brief Checking the output of the IP address in std::vector format
 TEST(test_print_ip, print_vector)
 {
 	StdOutReader reader;
@@ -81,6 +95,7 @@ TEST(test_print_ip, print_vector)
 
 
 
+/// \brief Checking the output of the IP address in std::list format
 TEST(test_print_ip, print_list)
 {
 	StdOutReader reader;
@@ -93,6 +108,7 @@ TEST(test_print_ip, print_list)
 
 
 
+/// \brief Checking the output of the IP address in std::tuple format
 TEST(test_print_ip, print_tuple)
 {
 	StdOutReader reader;

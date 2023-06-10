@@ -1,8 +1,3 @@
-#pragma once
-
-#include <sstream>
-#include <iostream>
-
 /*!
 \file
 \brief StdOutReader class header file
@@ -10,6 +5,12 @@
 This file contains the definition of the StdOutReader class used to intercept messages sent 
 to standard output.
 */
+
+#pragma once
+
+#include <sstream>
+#include <iostream>
+
 
 
 /*!
