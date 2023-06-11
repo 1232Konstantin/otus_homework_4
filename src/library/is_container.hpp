@@ -1,3 +1,8 @@
+/*!
+\file
+\brief Helper functions for defining std containers
+*/
+
 #include <type_traits>
 
 
