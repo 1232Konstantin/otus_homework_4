@@ -7,10 +7,7 @@ project(print_ip VERSION ${PROJECT_VERSION})
 
 set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
-
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
-set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "_CMake")
-set_property(GLOBAL PROPERTY AUTOGEN_TARGETS_FOLDER "_CMake/autogen")
 
 if (MSVC)
 	add_compile_options(/W4)
