@@ -10,10 +10,11 @@ typename std::enable_if<std::is_arithmetic_v<T>, void>::type
 print_ip(T value)
 {
 	int size = sizeof(T);
-	for (int i = size - 1; i > 0; --i)
-		std::cout << ((value >> i * 8) & 0xFF) << '.';
+	auto arr = reinterpret_cast<const unsigned char*>(&value);
+	for (int i = size - 1; i >= 0; --i)
+		std::cout << static_cast<int>(arr[i]) << ".";
 
-	std::cout << (value & 0xFF) << std::endl;
+	std::cout << static_cast<int>(arr[0]) << std::endl;
 }
 
 
