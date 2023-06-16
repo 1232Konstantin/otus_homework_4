@@ -11,7 +11,7 @@ print_ip(T value)
 {
 	int size = sizeof(T);
 	auto arr = reinterpret_cast<const unsigned char*>(&value);
-	for (int i = size - 1; i >= 0; --i)
+	for (int i = size - 1; i > 0; --i)
 		std::cout << static_cast<int>(arr[i]) << ".";
 
 	std::cout << static_cast<int>(arr[0]) << std::endl;
