@@ -118,10 +118,3 @@ TEST(test_print_ip, print_tuple)
 	
 	EXPECT_TRUE(result == "123.456.789.0\n");
 }
-
-
-
-int main(int argc, char** argv) {
-	testing::InitGoogleTest(&argc, argv);
-	return RUN_ALL_TESTS();
-}
