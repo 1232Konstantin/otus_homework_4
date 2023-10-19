@@ -39,7 +39,7 @@ struct is_container
 	>
 > : public std::true_type{};
 
-
-
+//Konstantin: ИМХО проверку на соответствие контейнеру можно было бы упростить, оставив только проверку на наличие итератора, а затем 
+//проверив на соответсвие уже конкретно list и vector как того требует условие задания 
 template <typename T>
 constexpr bool is_container_v = is_container<T>::value;
