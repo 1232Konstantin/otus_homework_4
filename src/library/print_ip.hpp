@@ -38,7 +38,8 @@ print_ip(T value)
 
 	std::cout << *lastIt << std::endl;
 }
-
+//Konstantin: По условиям задания распечатке подлежал не всякий контейнер, кажется только список и вектор, но не ,например, set 
+//насколько я понял предложенная реализация is_container_v<T> это игнорирует
 
 
 template<typename T, size_t...I>
@@ -47,7 +48,8 @@ void print_tuple_ip(const T &tuple, std::index_sequence<I...>)
 	(..., (std::cout << (I == 0 ? "" : ".") << std::get<I>(tuple)));
 	std::cout << std::endl;
 }
-
+//Konstantin: Понравилась лаконичная реализация распечатки членов кортежа, однако по условиям задания компиляция должна выдать ошибку при несовпадении типов в кортеже
+//не вижу этой проверки
 
 
 template<template<typename...> typename T, typename...V>
@@ -56,3 +58,5 @@ print_ip(const T<V...> &tuple)
 {
 	print_tuple_ip(tuple, std::make_index_sequence<sizeof...(V)>());
 }
+//Konstantin: Красивая проверка типа на соответсвие кортежу. 
+//В целом:  понравилась компактность кода в части кортежа
